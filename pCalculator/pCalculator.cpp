@@ -2,106 +2,111 @@
 #include <iostream>
 #include <vector>
 
-sf::RenderWindow window(sf::VideoMode(330, 500), "Calculator");
-sf::RectangleShape rectangle(sf::Vector2f(50, 50));
 
 class Calculator {
 public:
-
-    void look() {
-
-        rectangle.setFillColor(sf::Color(105, 105, 105));
-        rectangle.setOutlineThickness(1.f);
-        rectangle.setOutlineColor(sf::Color(0, 0, 0));
-
-
-        while (window.isOpen())
-        {
-            sf::Event event;
-            while (window.pollEvent(event))
-            {
-                if (event.type == sf::Event::Closed)
-                    window.close();
-            }
-
-
-            window.clear(sf::Color::White);
-
-            rectangle.setPosition(0, 0);
-            window.draw(rectangle);
-
-            rectangle.setPosition(0, 100);
-            window.draw(rectangle);
-
-            rectangle.setPosition(100, 0);
-            window.draw(rectangle);
-
-            rectangle.setPosition(0, 200);
-            window.draw(rectangle);
-
-            rectangle.setPosition(200, 0);
-            window.draw(rectangle);
-
-            rectangle.setPosition(0, 300);
-            window.draw(rectangle);
-
-            rectangle.setPosition(300, 0);
-            window.draw(rectangle);
-
-            rectangle.setPosition(100, 100);
-            window.draw(rectangle);
-
-            rectangle.setPosition(200, 100);
-            window.draw(rectangle);
-
-            rectangle.setPosition(200, 200);
-            window.draw(rectangle);
-
-            rectangle.setPosition(200, 300);
-            window.draw(rectangle);
-
-            rectangle.setPosition(300, 100);
-            window.draw(rectangle);
-
-            rectangle.setPosition(300, 200);
-            window.draw(rectangle);
-
-            rectangle.setPosition(300, 300);
-            window.draw(rectangle);
-
-            rectangle.setPosition(100, 200);
-            window.draw(rectangle);
-
-            rectangle.setPosition(100, 300);
-            window.draw(rectangle);
-
-
-            window.display();
-        }
-    }
     void mult() {
-        rectangle.setPosition(100, 300);
-        window.draw(rectangle);
     }
     void sub() {
-        rectangle.setPosition(100, 300);
-        window.draw(rectangle);
+        
     }
     void add() {
-        rectangle.setPosition(100, 300);
-        window.draw(rectangle);
+       
     }
     void div() {
-        rectangle.setPosition(100, 300);
-        window.draw(rectangle);
+        
     }
 };
 
 
 int main()
 {
+    sf::RenderWindow window(sf::VideoMode(305, 500), "Calculator");
+    sf::RectangleShape rectangle(sf::Vector2f(70, 50));
 
-    Calculator user;
-    user.look();
+    
+    rectangle.setOutlineThickness(1.f);
+    rectangle.setOutlineColor(sf::Color(0, 0, 0));
+
+    
+    while (window.isOpen())
+    {
+        sf::Event event;
+        while (window.pollEvent(event))
+        {
+            if (event.type == sf::Event::Closed)
+                window.close();
+        }
+
+        window.clear(sf::Color::Black);
+
+        rectangle.setFillColor(sf::Color(35, 43, 43));
+
+        rectangle.setPosition(5, 445);
+        window.draw(rectangle);
+        rectangle.setPosition(80, 445);
+        window.draw(rectangle);
+        rectangle.setPosition(155, 445);
+        window.draw(rectangle);
+        
+        
+        rectangle.setPosition(5, 390);
+        window.draw(rectangle);
+        rectangle.setPosition(80, 390);
+        window.draw(rectangle);
+        rectangle.setPosition(155, 390);
+        window.draw(rectangle);
+        
+       
+        rectangle.setPosition(5, 335);
+        window.draw(rectangle);
+        rectangle.setPosition(80, 335);
+        window.draw(rectangle);
+        rectangle.setPosition(155, 335);
+        window.draw(rectangle);
+        
+        
+        rectangle.setPosition(5, 280);
+        window.draw(rectangle);
+        rectangle.setPosition(80, 280);
+        window.draw(rectangle);
+        rectangle.setPosition(155, 280);
+        window.draw(rectangle);
+        
+        rectangle.setFillColor(sf::Color(105, 105, 105));
+
+        rectangle.setPosition(5, 225);
+        window.draw(rectangle);
+        rectangle.setPosition(80, 225);
+        window.draw(rectangle);
+        rectangle.setPosition(155, 225);
+        window.draw(rectangle);
+        
+
+        rectangle.setPosition(5, 170);
+        window.draw(rectangle);
+        rectangle.setPosition(80, 170);
+        window.draw(rectangle);
+        rectangle.setPosition(155, 170);
+        window.draw(rectangle);
+        
+
+        rectangle.setPosition(230, 445);
+        window.draw(rectangle);
+        rectangle.setPosition(230, 390);
+        window.draw(rectangle);
+        rectangle.setPosition(230, 335);
+        window.draw(rectangle);
+        rectangle.setPosition(230, 280);
+        window.draw(rectangle);
+        rectangle.setPosition(230, 225);
+        window.draw(rectangle);
+        rectangle.setPosition(230, 170);
+        window.draw(rectangle);
+
+        window.display();
+    }
+
+  
     return 0;
 }
